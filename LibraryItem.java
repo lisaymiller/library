@@ -1,15 +1,13 @@
 package library;
 
 public class LibraryItem {
-    private String title, author, publisher, type, format;
+    private String title, author, publisher;
     private int releaseYear;
 
-    public LibraryItem(String title, String author, String publisher, String type, String format, int releaseYear) {
+    public LibraryItem(String title, String author, String publisher, int releaseYear) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
-        this.type = type;
-        this.format = format;
         this.releaseYear = releaseYear;
     }
 
@@ -23,14 +21,6 @@ public class LibraryItem {
 
     public String getPublisher() {
         return publisher;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getFormat() {
-        return format;
     }
 
     public int getReleaseYear() {
@@ -49,14 +39,6 @@ public class LibraryItem {
         this.publisher = publisher;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setFormat(String format) {
-        this.format = format;
-    }
-
     public void setReleaseYear(int releaseYear) {
         this.releaseYear = releaseYear;
     }
@@ -64,7 +46,7 @@ public class LibraryItem {
     @Override
     public String toString() {
         return this.title + " is written by " + this.author + " and published by " + this.publisher + ", circa "
-                + this.releaseYear + ". This " + this.type + " is available in " + this.format + ".";
+                + this.releaseYear;
     }
 
 }
