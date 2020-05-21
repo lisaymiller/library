@@ -1,6 +1,6 @@
 package library;
 
-public class Periodical extends LibraryItem {
+public class Periodical extends LibraryItem implements Reserveable, Loanable {
 
     private String type;
     private boolean availableOnline;
@@ -41,5 +41,25 @@ public class Periodical extends LibraryItem {
         } else {
             return "not currently";
         }
+    }
+
+    @Override
+    public boolean isLoanable() {
+        return false;
+    }
+
+    @Override
+    public int maxTimeAllowedDays() {
+        return 0;
+    }
+
+    @Override
+    public boolean isReserveable() {
+        return true;
+    }
+
+    @Override
+    public int maxTimeAllowedHours() {
+        return 4;
     }
 }

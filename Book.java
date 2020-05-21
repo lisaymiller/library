@@ -1,6 +1,6 @@
 package library;
 
-public class Book extends LibraryItem {
+public class Book extends LibraryItem implements Loanable, Reserveable {
 
     private String genre, format;
 
@@ -31,6 +31,26 @@ public class Book extends LibraryItem {
     @Override
     public String toString() {
         return "This " + this.genre + " literature comes in " + this.format;
+    }
+
+    @Override
+    public boolean isReserveable() {
+        return false;
+    }
+
+    @Override
+    public int maxTimeAllowedHours() {
+        return 0;
+    }
+
+    @Override
+    public boolean isLoanable() {
+        return true;
+    }
+
+    @Override
+    public int maxTimeAllowedDays() {
+        return 10;
     }
 
 }
