@@ -4,7 +4,8 @@ public class Book extends LibraryItem implements Loanable, Reserveable {
 
     private String genre, format;
 
-    public Book(String title, String author, String publisher, int releaseYear, String genre, String format) {
+    public Book(String title, Author author, PublishingCompany publisher, int releaseYear, String genre,
+            String format) {
         super(title, author, publisher, releaseYear);
         this.genre = genre;
         this.format = format;

@@ -5,7 +5,7 @@ public class Periodical extends LibraryItem implements Reserveable, Loanable {
     private String type;
     private boolean availableOnline;
 
-    public Periodical(String title, String author, String publisher, int releaseYear, String type,
+    public Periodical(String title, Author author, PublishingCompany publisher, int releaseYear, String type,
             boolean availableOnline) {
         super(title, author, publisher, releaseYear);
         this.type = type;

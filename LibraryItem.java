@@ -1,10 +1,12 @@
 package library;
 
 public class LibraryItem {
-    private String title, author, publisher;
+    private String title;
+    private Author author;
+    private PublishingCompany publisher;
     private int releaseYear;
 
-    public LibraryItem(String title, String author, String publisher, int releaseYear) {
+    public LibraryItem(String title, Author author, PublishingCompany publisher, int releaseYear) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -15,11 +17,11 @@ public class LibraryItem {
         return title;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public String getPublisher() {
+    public PublishingCompany getPublisher() {
         return publisher;
     }
 
@@ -31,19 +33,10 @@ public class LibraryItem {
         this.title = title;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
     public void setReleaseYear(int releaseYear) {
         this.releaseYear = releaseYear;
     }
 
-    @Override
     public String toString() {
         return this.title + " is written by " + this.author + " and published by " + this.publisher + ", circa "
                 + this.releaseYear;

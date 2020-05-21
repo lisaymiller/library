@@ -6,8 +6,8 @@ public class AudioBook extends LibraryItem implements Reserveable, Loanable {
     private double length;
     private String format;
 
-    public AudioBook(String title, String author, String publisher, int releaseYear, String genre, double length,
-            String format) {
+    public AudioBook(String title, Author author, PublishingCompany publisher, int releaseYear, String genre,
+            double length, String format) {
         super(title, author, publisher, releaseYear);
         this.genre = genre;
         this.length = length;

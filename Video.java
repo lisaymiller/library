@@ -5,7 +5,8 @@ public class Video extends LibraryItem implements Reserveable, Loanable {
     private double length;
     private String format;
 
-    public Video(String title, String author, String publisher, int releaseYear, double length, String format) {
+    public Video(String title, Author author, PublishingCompany publisher, int releaseYear, double length,
+            String format) {
         super(title, author, publisher, releaseYear);
         this.length = length;
         this.format = format;
