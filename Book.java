@@ -54,4 +54,13 @@ public class Book extends LibraryItem implements Loanable, Reserveable {
         return 10;
     }
 
+    // @Override
+    // public double lateFee() {
+    // if (lateFee!= null) {
+    // return 5.00;
+    // } else {
+    // return 0.0;
+    // }
+    // }
+
 }

@@ -1,11 +1,11 @@
 package library;
 
-public class CardHolder {
+public class CardHolder<E> {
     private String name;
     private int libraryCard;
-    private boolean overdueBooks;
+    private OverdueList<E> overdueBooks;
 
-    public CardHolder(String name, int libraryCard, boolean overdueBooks) {
+    public CardHolder(String name, int libraryCard, OverdueList<E> overdueBooks, Type overdueType) {
         this.name = name;
         this.libraryCard = libraryCard;
         this.overdueBooks = overdueBooks;
@@ -20,7 +20,7 @@ public class CardHolder {
         return libraryCard;
     }
 
-    public boolean isOverdueBooks() {
+    public OverdueList<E> isOverdueBooks() {
         return overdueBooks;
     }
 
@@ -33,7 +33,15 @@ public class CardHolder {
         this.libraryCard = card;
     }
 
-    public void setOverdueBooks(boolean overdueBooks) {
+    public void setOverdueBooks(OverdueList<E> overdueBooks) {
         this.overdueBooks = overdueBooks;
+    }
+
+    public String toString() {
+        if (overdueBooks != null) {
+            return "Hello " + this.name + ". Please return " + this.overdueBooks + " or a late fee will apply.";
+        } else {
+            return "Hello " + this.name + "! Please come again.";
+        }
     }
 }
